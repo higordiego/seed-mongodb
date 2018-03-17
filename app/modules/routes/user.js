@@ -1,7 +1,7 @@
 module.exports = app => {
-    const url = `${app.url}/user`
-    const Controller = require('./controller')(app)
-    const Validate = require('./validate')(app)
+    const url = `${process.env.API_VERSION}/user`
+    const Controller = require('../controllers/user')(app)
+    const Validate = require('../validates/user')(app)
 
     app.route(url)
         .get(Controller.listAll)

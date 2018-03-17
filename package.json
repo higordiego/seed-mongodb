@@ -30,11 +30,13 @@
   },
   "dependencies": {
     "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
     "express": "^4.16.2",
     "express-validator": "^4.3.0",
     "jsonwebtoken": "^8.1.0",
     "mongoose": "^4.13.7",
     "morgan": "^1.9.0",
-    "nodemon": "^1.14.3"
+    "nodemon": "^1.14.3",
+    "stone_pagamentos": "^1.0.3"
   }
 }

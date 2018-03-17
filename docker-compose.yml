@@ -3,7 +3,7 @@ services:
     mongodb:
         image: mongo:latest
         restart: always
-        container_name: "mongodb_hydra"
+        container_name: "mongodb_hacketron"
         environment:
           - MONGO_DATA_DIR=/data/db
           - MONGO_LOG_DIR=/dev/null
@@ -16,7 +16,7 @@ services:
     backend:
         image: node:8.9.3
         restart: always
-        container_name: backend_hydra
+        container_name: backend_hacketron
         volumes:
             - .:/backend
             - /node_modules

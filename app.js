@@ -1,3 +1,4 @@
+require('dotenv').load()
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
@@ -19,11 +20,9 @@ app.use(validator(validateFormat))
 app.use(morgan('dev'))
 app.use(cors())
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT
 
 const server = http.createServer(app)
-
-app.url = require('./app/config/urls').api
 
 app.use((req, res, next) => {
     res.set('X-Powered-By', 'Chupa ... :P')

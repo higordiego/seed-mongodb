@@ -1,7 +1,7 @@
 module.exports = app => {
-    const User = require('./model')
+    const User = require('../models/user')
     const Persistence = require('../../helpers/persistence')(User)
-    const Business = require('./business')(app)
+    const Business = require('../business/user')(app)
     const Validate = require('../../helpers/validate')
     return {
         create: (req, res) =>

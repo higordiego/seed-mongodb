@@ -7,12 +7,9 @@ module.exports = ({
         return req.validationErrors()
     },
 
-    validateBody: (object, ...body) => new Promise((resolve, reject) => {
-        const newObject = {}
-        body.forEach(key => {
-            newObject[key] = object[key]
-        })
-        resolve(newObject)
+    validateBody: (object, ...body) => returnObject => body.map(key => {
+        if (object[key] !== undefined) returnObject[key] = object[key]
+        return returnObject
     }),
 
     requestOptional: (req, required, Errors) => {
