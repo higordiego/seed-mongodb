@@ -5,6 +5,7 @@ const User = new Schema({
     name: {type: String, required: true},
     email: {type: String, required: true, index: {unique: true}},
     avatar: {type: String, default: ''},
+    gcm: {type: String, default: ''},
     active: {type: Number, defaul: 0},
     number: {type: Number, required: true},
     ddd: {type: Number, required: true},
