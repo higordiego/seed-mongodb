@@ -1,7 +1,7 @@
 module.exports = ({
     token: (object) => {
         const jwt = require('jsonwebtoken')
-        const key = require('../config/urls').token
+        const key = process.env.TOKEN_SECRET
         const token = jwt.sign(object, key, {
             algorithm: 'HS256'
         })
